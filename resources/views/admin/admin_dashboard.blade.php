@@ -24,6 +24,8 @@
             <h2>Welcome, <span class="text-primary">{{ Auth::guard('admin')->user()->name }}</span></h2>
             <p class="mt-3">This is your admin dashboard. You can manage users, customers, or anything you want here.</p>
         </div>
+
+        <a href="{{ route('admin.products.index') }}"><h2>Manage Products</h2></a>
     </div>
 
 </body>
