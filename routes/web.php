@@ -1,11 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\CustomerAuthController;
+
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\Admin_OrderController;
+
 use App\Http\Controllers\Customer\CProductController;
 use App\Http\Controllers\Customer\OrderController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -25,6 +30,11 @@ Route::prefix('admin')->group(function () {
         //Dashboard
         Route::get('dashboard', [AdminAuthController::class, 'showDashboard'])->name('admin.admin_dashboard');
         Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+        //Orders
+        Route::get('orders', [Admin_OrderController::class, 'index'])->name('admin.orders.index');
+        Route::post('orders/{order}/update-status', [Admin_OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
+
     });
 
     Route::middleware('admin.auth')->name('admin.')->group(function () {
