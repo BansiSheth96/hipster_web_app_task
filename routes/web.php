@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\CustomerAuthController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Customer\CProductController;
+use App\Http\Controllers\Customer\OrderController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -52,4 +53,10 @@ Route::prefix('customer')->group(function () {
 
 Route::prefix('customer')->name('customer.')->group(function () {
     Route::get('products', [CProductController::class, 'index'])->name('products.index');
+});
+
+Route::prefix('customer')->middleware('customer.auth')->name('customer.')->group(function() {
+    Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('orders/create/{productId}', [OrderController::class, 'create'])->name('orders.create');
+    Route::post('orders', [OrderController::class, 'store'])->name('orders.store');
 });

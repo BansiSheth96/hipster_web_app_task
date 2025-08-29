@@ -24,7 +24,8 @@
             <h2>Welcome, <span class="text-primary">{{ Auth::guard('customer')->user()->c_name }}</span></h2>
             <p class="mt-3">Welocome to dashboard. You can view products, orders..</p>
         </div>
+        <a href="{{ route('customer.products.index') }}"><h2>Browse Products</h2></a>
+        <a href="{{ route('customer.orders.index') }}"><h2>Your Order Details</h2></a>
     </div>
-
 </body>
 </html>

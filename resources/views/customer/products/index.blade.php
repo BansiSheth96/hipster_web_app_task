@@ -9,6 +9,8 @@
 <div class="container mt-4">
     <h2 class="mb-4">Browse Products</h2>
 
+    <a href="{{ route('customer.customer_dashboard') }}"><h2>Dashboard</h2></a>
+
     <!-- Search -->
     <form method="GET" action="{{ route('customer.products.index') }}" class="mb-3 d-flex">
         <input type="text" 
@@ -31,6 +33,7 @@
                     <th>Price</th>
                     <th>Category</th>
                     <th>Stock</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,6 +55,17 @@
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->category }}</td>
                         <td>{{ $product->stock }}</td>
+                        <td>
+                            @if(Auth::guard('customer')->check())
+                                @if($product->stock > 0)
+                                    <a href="{{ route('customer.orders.create', $product->id) }}" class="btn btn-success btn-sm">Place Order</a>
+                                @else
+                                    <span class="text-danger">Out of Stock</span>
+                                @endif
+                            @else
+                                <a href="{{ route('customer.customer_login') }}" class="btn btn-primary btn-sm">Login to Order</a>
+                            @endif
+                        </td>
                     </tr>
                 @empty
                     <tr>
