@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\Admin_OrderController;
 use App\Http\Controllers\Customer\CProductController;
 use App\Http\Controllers\Customer\OrderController;
 
+use App\Http\Controllers\Admin\ProductImportController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -34,6 +36,10 @@ Route::prefix('admin')->group(function () {
         //Orders
         Route::get('orders', [Admin_OrderController::class, 'index'])->name('admin.orders.index');
         Route::post('orders/{order}/update-status', [Admin_OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
+
+        //Bulk Product Import
+        Route::get('products/import', [ProductImportController::class, 'showImportForm']);
+        Route::post('products/import', [ProductImportController::class, 'import'])->name('admin.products.import');
 
     });
 
@@ -70,3 +76,4 @@ Route::prefix('customer')->middleware('customer.auth')->name('customer.')->group
     Route::get('orders/create/{productId}', [OrderController::class, 'create'])->name('orders.create');
     Route::post('orders', [OrderController::class, 'store'])->name('orders.store');
 });
+

@@ -27,6 +27,7 @@
 
         <a href="{{ route('admin.products.index') }}"><h2>Manage Products</h2></a>
         <a href="{{ route('admin.orders.index') }}"><h2>Manage Orders</h2></a>
+        <a href="{{ route('admin.products.import') }}"><h2>Bulk Product Import</h2></a>
     </div>
 
 </body>

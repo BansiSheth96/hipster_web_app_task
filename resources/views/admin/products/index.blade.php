@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Product List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h1><center>Products List</center></h1>
@@ -62,5 +63,9 @@
             @endforeach
         </tbody>
     </table>
+
+    <div class="flex justify-center mt-3">
+         {{ $products->links('pagination::bootstrap-5') }}
+    </div>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container mt-4">
-    <h2>All Customer Orders</h2>
+    <h2><center>All Customer Orders</center></h2>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -73,7 +73,7 @@
     </table>
 
     <div class="mt-3">
-        {{ $orders->links() }}
+        {{ $orders->links('pagination::bootstrap-5') }}
     </div>
 </div>
 </body>
