@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ProductCreationTest extends TestCase
 {
-    use RefreshDatabase;
+   // use RefreshDatabase;
 
     #[Test]
     public function product_can_be_created_and_saved_in_database()

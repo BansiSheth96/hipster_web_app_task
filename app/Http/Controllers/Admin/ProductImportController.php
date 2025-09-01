@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Bus;
 use App\Jobs\ProcessProductImport;
 use App\Models\Product;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class ProductImportController extends Controller
 {
@@ -15,7 +18,7 @@ class ProductImportController extends Controller
         return view('admin.products.import'); 
     }
 
-   public function import(Request $request)
+    public function import(Request $request)
     {
         $request->validate([
             'csv' => 'required',
@@ -65,10 +68,12 @@ class ProductImportController extends Controller
                 }
             }
 
+            ProcessProductImport::dispatch($path);
+
             fclose($handle);
         }
 
         return back()->with('success', 'Products imported successfully!');
     }
-            
+
 }

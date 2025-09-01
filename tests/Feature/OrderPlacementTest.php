@@ -11,11 +11,13 @@ use PHPUnit\Framework\Attributes\Test;
 
 class OrderPlacementTest extends TestCase
 {
-     use RefreshDatabase;
+    //use RefreshDatabase;
 
     #[Test]
     public function a_logged_in_customer_can_place_an_order_and_stock_decreases()
     {
+        $this->withoutMiddleware(); // DISABLE CSRF
+
         $product = Product::create([
             'product_name' => 'Test Product A',
             'description'  => 'Product used for testing',
@@ -26,9 +28,9 @@ class OrderPlacementTest extends TestCase
         ]);
 
         $customer = Customer::create([
-            'c_name' => 'Test Customer',
-            'c_email' => 'test@example.com',
-            'c_mobile_no' => '9999999999',
+            'c_name' => 'Test Customer2',
+            'c_email' => 'test2@example.com',
+            'c_mobile_no' => '9999999990',
             'password' => bcrypt(12345678), 
         ]);
 

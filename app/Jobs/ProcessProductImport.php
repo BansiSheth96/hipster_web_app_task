@@ -30,8 +30,9 @@ class ProcessProductImport implements ShouldQueue
     */
     public function handle()
     {
-        $fullPath = storage_path('app/' . $this->path);
-        dd($fullPath);
+        $path = is_array($this->path) ? reset($this->path) : $this->path;
+
+        $fullPath = storage_path('app/' . $path);
 
         if (!file_exists($fullPath)) {
             \Log::error("Import failed: File not found at {$fullPath}");
