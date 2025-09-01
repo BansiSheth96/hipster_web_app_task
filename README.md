@@ -1,66 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Documentation Of Project Setup:-
+https://docs.google.com/document/d/1VPnW6974PFtDMHr09fiUv3YcmmAhJrz7U3981U7fJus/edit?usp=sharing
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Admin Module ScreenShots:-
+<img width="1933" height="1211" alt="Login" src="https://github.com/user-attachments/assets/a6cdbb46-399c-4055-97b8-2b5e56f2fb7b" /><br><br>
+<img width="1929" height="1178" alt="Register" src="https://github.com/user-attachments/assets/cc1d3a68-aafd-4c39-9c8a-eaf5d321264a" /><br><br>
+<img width="2244" height="941" alt="admin_dashboard" src="https://github.com/user-attachments/assets/8a05e6e5-bdd1-4d00-af57-38fc1a183bd5" /><br><br>
+<img width="2246" height="1421" alt="admin_products" src="https://github.com/user-attachments/assets/41387bfb-8bfa-4c73-8566-d457b45d03dd" /><br><br>
+<img width="2247" height="1433" alt="admin_products_with_paginate" src="https://github.com/user-attachments/assets/70bf870d-04bb-4c25-87a2-0069be96bf94" /><br><br>
+<img width="2161" height="1248" alt="admin_create_product" src="https://github.com/user-attachments/assets/2ce2438c-235d-49b1-a72e-21dcc518013d" /><br><br>
+<img width="2219" height="1127" alt="admin_view_product" src="https://github.com/user-attachments/assets/4b8aa5e1-6766-4e6e-89e6-e602f392995c" /><br><br>
+<img width="2182" height="1392" alt="admin_product_update" src="https://github.com/user-attachments/assets/96298897-0b9a-446f-a984-9186065ae530" /><br><br>
+<img width="2256" height="1408" alt="admin_product_delete" src="https://github.com/user-attachments/assets/6bd720e9-881f-421c-ac9c-99724f080bb6" /><br><br>
+<img width="2247" height="1198" alt="admin_manage_orders" src="https://github.com/user-attachments/assets/5280bc13-5132-44ef-a082-31f0fa051eba" /><br><br>
+<img width="2254" height="1097" alt="admin_bulk_import_products" src="https://github.com/user-attachments/assets/a4f5d1c2-f88f-4089-ac92-f9469ad768d3" /><br><br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Customer Module Screenshots:-
+<img width="2256" height="1080" alt="customer_dashboard" src="https://github.com/user-attachments/assets/7f15f146-d0bc-4e99-b191-922f2a65d1a2" /><br><br>
+<img width="2199" height="1215" alt="customer_browse_product_with_login" src="https://github.com/user-attachments/assets/71d0535c-217a-4d67-9a07-5ca892480b86" /><br><br>
+<img width="2207" height="1196" alt="customer_place_an_order" src="https://github.com/user-attachments/assets/e838ed2a-14c6-4780-a1b0-cf70580f3038" /><br><br>
+<img width="2242" height="1284" alt="customer_order_placed_details" src="https://github.com/user-attachments/assets/e5f34a4b-1b72-4dd2-86be-544cf1fe97ac" /><br><br>
+<img width="2214" height="882" alt="customer_product_search" src="https://github.com/user-attachments/assets/2b3409fb-34fa-4cca-b19a-c44f88c592e9" /><br><br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Customer Browse Product Without Login:-
+<img width="2228" height="1336" alt="customer_browse_product_without_login" src="https://github.com/user-attachments/assets/5bc88f46-7d78-4d01-bd6b-c863eb18d96f" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
