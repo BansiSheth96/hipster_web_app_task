@@ -18,6 +18,7 @@
     <table class="table table-bordered align-middle">
         <thead class="table-light">
             <tr>
+                <th>ID</th>
                 <th>Image</th>
                 <th>Product Name</th>
                 <th>Description</th>
@@ -30,8 +31,9 @@
             </tr>
         </thead>
         <tbody>
-            @forelse($orders as $order)
+            @forelse($orders as $index => $order)
                 <tr>
+                    <td>{{ $orders->firstItem() + $index }}</td>
                     <td>
                         @if($order->product->image)
                             <img src="{{ asset('storage/'.$order->product->image) }}" width="60" alt="{{ $order->product->product_name }}">

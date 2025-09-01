@@ -33,9 +33,9 @@
             </tr>
         </thead>
         <tbody>
-            @forelse($orders as $order)
+            @forelse($orders as $index => $order)
                 <tr>
-                    <td>{{ $order->id }}</td>
+                    <td>{{ $orders->firstItem() + $index }}</td>
                     <td>{{ $order->customer->c_name ?? 'N/A' }}</td>
                     <td>
                         @if($order->product->image)

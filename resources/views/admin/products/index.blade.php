@@ -31,9 +31,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($products as $product)
+            @foreach ($products as $index => $product)
                 <tr>
-                    <td>{{ $product->id }}</td>
+                    <td>{{ $products->firstItem() + $index }}</td>
                      <td> 
                         @if($product->image)
                             <img src="{{ asset('storage/'.$product->image) }}" width="150">
