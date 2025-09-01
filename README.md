@@ -26,6 +26,93 @@ Customer Browse Product Without Login:-
 <img width="2228" height="1336" alt="customer_browse_product_without_login" src="https://github.com/user-attachments/assets/5bc88f46-7d78-4d01-bd6b-c863eb18d96f" />
 
 
+**Laravel Developer– Final Requirements**
+Objective:-
+Build a secure and optimized Laravel web application demonstrating your expertise in:
+Multi-authentication system
+Real-time updates using websockets
+Web push notifications
+Efficient large-scale product import using Laravel queues and batch processing
+
+Tasks & Features:-
+1. Multiple Authentication Guards
+Implement separate login, registration, and dashboards for Admin and Customer users.
+Use Laravel’s built-in multi-authentication system ( Auth::guard() ).
+Protect routes using middleware per guard (e.g., auth:admin , auth:customer ).
+
+2. Product Management:-
+Admin Features:
+CRUD operations for products (fields: name , description , price , image , category ,
+stock ).
+Bulk import of up to 100,000 products via CSV/Excel using chunked processing and Laravel
+queues. If no image is provided in the CSV, a default image should be used for the product.
+Provide products_sample_import.csv with the actual demo data used for testing the
+import functionality. Candidates should generate this file after implementing and testing the
+import feature.
+Customer Features:
+Browse, search, and paginate product listings.
+
+3. Order Management:-
+Customer: Place orders for available products.
+Admin: View and update order status ( Pending , Shipped , Delivered ).
+
+4. Real-Time Updates (Websockets):-
+Use real-time updates via websockets (framework or library of your choice).
+Broadcast order status updates in real-time to customers (no page refresh).
+Show real-time online/offline presence of users (Admins and Customers) in the Admin
+dashboard using Presence Channels, and ensure this presence status is also updated and
+stored in the database.
+
+5. Web Push Notifications
+Integrate a push notification service (any of your choice).
+Notify Customers via browser push notifications & websockets when Admin updates order
+status.
+Must work instantly and not rely on polling.
+
+6. Optimized Product Import
+Allow Admin to upload CSV/Excel files with up to 100k products.
+Use any suitable approach or library for chunked reading and processing.
+Validate each row and queue the job
+Prevent timeouts using background processing.
+
+Testing Requirements:-
+Add at least one feature test and one unit test for any key user flow such as:
+Product creation
+Order placement
+Bulk product import logic and validation
+Use Laravel’s built-in test suite ( php artisan test ) to run your test cases.
+
+UI Expectations:-
+This is a backend-focused assignment. You are expected to demonstrate the core logic, backend
+functionality, real-time interactions, and testability of your code. The UI can be minimal, basic, or even
+unstyled — the emphasis is not on design, responsiveness, or frontend frameworks.
+A simple HTML-based or Blade-rendered UI is sufficient as long as it clearly presents the implemented
+backend features.
+
+Deliverables:-
+Codebase: Push entire Laravel project to a public Git repository. No zip uploads.
+Sample File: Include products_sample_import.csv in repo. This file should contain demo
+data that you personally used to test and verify the import functionality.
+Documentation (README.md)
+Setup instructions
+Multi-auth strategy and route protection details
+Websocket stack used.
+Web push notification setup and subscription logic
+Bulk import implementation details and optimizations
+Testing guide (how to run and what it covers)
+Notes on architectural or performance decisions
+Screencast (Optional): 3–5 minute video walkthrough of app + code (host on any platform such
+as YouTube, Loom, or others)
+
+
+Rules & Notes:-
+All code must be original. No AI/copilot/suggestions/tutorial copy-paste.
+Use WebSocket broadcasting only. No AJAX polling allowed.
+Commit history must show step-by-step development.
+Aim for clarity, security, and performance in your implementation.
+
+
+
 
 
 
